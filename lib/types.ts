@@ -63,6 +63,12 @@ export interface InfoItem {
   value: string;
 }
 
+export interface Reference {
+  title: string;
+  url: string;
+  source?: string; // e.g. "百度百科", "维基百科", "官网" etc.
+}
+
 export interface Checkpoint {
   number: number;
   name: string;
@@ -71,6 +77,7 @@ export interface Checkpoint {
   address?: string;
   infoItems: InfoItem[];
   sections: CheckpointSection[];
+  references?: Reference[];
   imageFallback: {
     icon: string;
     text: string;

@@ -193,6 +193,31 @@ export default function CheckpointCard({ cp }: { cp: Checkpoint }) {
           );
         })}
 
+        {/* Reference links */}
+        {cp.references && cp.references.length > 0 && (
+          <div className="mt-6 pt-4 border-t border-cream-dark/50">
+            <h4 className="font-serif text-sm font-bold text-gold mb-3 tracking-[0.05em]">
+              📖 参考资料
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {cp.references.map((ref, i) => (
+                <a
+                  key={i}
+                  href={ref.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs bg-cream hover:bg-sepia border border-cream-dark transition-colors duration-200 text-slate no-underline"
+                >
+                  <span className="text-gold font-medium">{ref.source}</span>
+                  <span className="text-slate/70">·</span>
+                  <span>{ref.title}</span>
+                  <span className="text-gold/40 ml-0.5">↗</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Check-in button */}
         <div className="text-center mt-7 pt-6 border-t border-cream-dark">
           <button
