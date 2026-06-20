@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: #faf7f0;
+    color: #3a3a3a;
+    line-height: 1.8;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(196, 162, 101, 0.3);
+    color: #1a1a1a;
+  }
+}
+
+@layer components {
+  /* Section header decoration */
+  .section-header h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-deco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .section-deco .deco-line {
+    width: 40px;
+    height: 1px;
+    background: #c4a265;
+  }
+
+  .section-deco .deco-diamond {
+    width: 8px;
+    height: 8px;
+    background: #b5343a;
+    transform: rotate(45deg);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf7f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4a265;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b5343a;
+}
