@@ -1,9 +1,11 @@
 import nanjingMochouTongjun from "./nanjing-mochou-tongjun";
+import renjianYanhuo from "./renjian-yanhuo";
 import { RouteData } from "@/lib/types";
 
 // All routes in one place — just add new imports and entries to add new routes
 const routes: RouteData[] = [
   nanjingMochouTongjun,
+  renjianYanhuo,
 ];
 
 export default routes;
